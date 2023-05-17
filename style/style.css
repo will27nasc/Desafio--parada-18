@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --color-1: #e4c1f9;
+    --color-2: #d0f4de;
+    --color-3: #a9def9;
+    --color-4: #ffc300;
+    --color-5: #fcf6bd;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-3);
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    max-width: 1180px;
+    margin: 15px auto;
+    background-color: var(--color-1);
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+}
+
+.fundo{
+    flex-grow: 4;
+    flex-shrink: 1;
+    background-image: url('../img/gastos.jpg');
+    background-color: #55B6FA;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 450px;
+}
+
+.box{
+    flex-grow: 1;
+    flex-shrink: 2;
+    background-color: var(--color-2);
+    padding: 10px 15px;
+}
+
+.box h1{
+    padding: 10px 6px 15px;
+}
+
+.w100{
+    max-width: 330px;
+    margin: 15px auto;
+}
+
+#descricao, #valor{
+    display: block;
+    width: 100%;
+    height: 25px;
+    border-radius: 6px;
+    text-indent: 10px;
+    border: 1px solid #ced4da;
+    background-color: var(--color-5);
+    outline: 0;
+}
+
+#registrar{
+    display: block;
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: auto;
+    background-color: var(--color-4);
+    border: 0;
+    border-bottom: 1px solid var(--color-5);
+    transition: 0.5s;
+}
+
+#registrar:hover{
+    background-color: var(--color-5);
+    border-bottom: 1px solid var(--color-4);
+}
+
+.lista-gastos{
+    overflow-y: scroll;
+    margin: 20px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    max-height: 200px;
+
+}
+
+.lista-gastos::-webkit-scrollbar {
+    width: 0;         
+}
+
+pre{
+    background-color: var(--color-5);
+    text-align: center;
+    line-height: 18px;
+}
+
+@media screen and (max-width: 768px){
+    .conteudo{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .fundo{
+        background-image: url('../img/gastos.jpg');
+        background-color: #55B6FA;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 300px;
+    }
+    
+    .box{
+        background-color: var(--color-2);
+        padding: 10px 15px;
+        min-height: 280px;
+    }
+
+    .lista-gastos{
+        text-align: center;
+    }
+}
